@@ -11,8 +11,6 @@ obligations, finite bridges, and expected terminal output, see
 
 - Python 3.12.10
 - SymPy 1.14.0
-- SciPy 1.17.1
-- NumPy 2.4.3
 - OR-Tools 9.15.6755 (SCIP backend for the finite integer checks)
 - PowerShell 7 or Windows PowerShell 5.1 for `verification.ps1`
 
@@ -27,17 +25,17 @@ profile with Python integers.
 Run these commands from this directory:
 
 ```powershell
-python progression_r4_subprogression_verify.py
-python progression_allbands_proof.py
-python progression_deterministic_index_verify.py
-python progression_allbands_lower.py
-python companion_certificate_verify.py
-python all_residue_migration_proof.py
-python all_residue_exact_spotcheck.py
-python single_cut_gain_proof.py
-python one_cut_global_proof.py
-python one_cut_unbounded_proof.py
-python near_endpoint_gap_verify.py
+python scripts/progression_r4_subprogression_verify.py
+python scripts/progression_allbands_proof.py
+python scripts/progression_deterministic_index_verify.py
+python scripts/progression_allbands_lower.py
+python scripts/companion_certificate_verify.py
+python scripts/all_residue_migration_proof.py
+python scripts/all_residue_exact_spotcheck.py
+python scripts/single_cut_gain_proof.py
+python scripts/one_cut_global_proof.py
+python scripts/one_cut_unbounded_proof.py
+python scripts/near_endpoint_gap_verify.py
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File verification.ps1
 ```
 
@@ -100,7 +98,5 @@ This table records pattern discovery. The proof of Theorem 4.8 is supplied by
 
 ## LaTeX
 
-```powershell
-pdflatex -interaction=nonstopmode -halt-on-error zarankiewicz_closed_forms_20260624.tex
-pdflatex -interaction=nonstopmode -halt-on-error zarankiewicz_closed_forms_20260624.tex
-```
+The manuscript is compiled from the submission folder with two passes of
+`pdflatex`; the source file is not duplicated in this repository.
